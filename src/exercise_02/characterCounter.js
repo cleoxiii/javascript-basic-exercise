@@ -9,5 +9,15 @@ export default function countCharacter(string, prediction) {
     return 0;
   }
 
+  if (prediction !== undefined) {
+    let count = 0;
+    for (let i = 0; i < string.length; i += 1) {
+      if (prediction(string.charAt(i))) {
+        count += 1;
+      }
+    }
+    return count;
+  }
+
   return string.length;
 }
