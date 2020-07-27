@@ -6,8 +6,26 @@ export function range(start, end) {
   //
   // * Please implement this function and pass all the tests in range_and_array_spec.js.
   // * Please do NOT modify the signature of the function.
+  const result = [];
+  if (start === end) {
+    return result;
+  }
 
-  throw new Error('Please delete this line and implement the function');
+  if (start < end) {
+    let current = start - 1;
+    while (current < end - 1) {
+      result.push(current += 1);
+    }
+  }
+
+  if (start > end) {
+    let current = start + 1;
+    while (current > end + 1) {
+      result.push(current -= 1);
+    }
+  }
+
+  return result;
 }
 
 export function sum(...numbers) {
