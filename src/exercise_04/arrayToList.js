@@ -12,4 +12,11 @@ export default function arrayToList(array) {
   if (array.length === 0) {
     throw new Error('Creating list from empty array');
   }
+
+  let list = null;
+  for (let i = array.length - 1; i >= 0; i -= 1) {
+    list = { value: array[i], next: list };
+  }
+
+  return list;
 }
