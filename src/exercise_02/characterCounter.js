@@ -8,4 +8,6 @@ export default function countCharacter(string, prediction) {
   if (string === null || string === undefined || string === '') {
     return 0;
   }
+
+  return string.length;
 }
