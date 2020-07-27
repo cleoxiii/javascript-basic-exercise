@@ -13,8 +13,24 @@ export default class Vector {
   // class.
 
   constructor(x, y) {
-    this.x = x;
-    this.y = y;
+    this.xPart = x;
+    this.yPart = y;
+  }
+
+  get x() {
+    return this.xPart;
+  }
+
+  get y() {
+    return this.yPart;
+  }
+
+  static plus(left, right) {
+    return new Vector(left.x + right.x, left.y + right.y);
+  }
+
+  static minus(left, right) {
+    return new Vector(left.x - right.x, left.y - right.y);
   }
 
   distance() {
